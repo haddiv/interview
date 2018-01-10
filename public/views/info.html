@@ -1,0 +1,173 @@
+<div class="jumbotron text-center">
+    <h1>Personal Information</h1>
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefixf" type="text" class="validate">
+                    <label for="icon_prefixf">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefixl" type="text" class="validate">
+                    <label for="icon_prefixl">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">date_range</i>
+                    <input id="datepicker" type="text" class="datepicker">
+                    <label for="datepicker">Birth Date</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Telephone</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="email" class="validate">
+                    <label for="email" data-error="wrong" data-success="right">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">location_on</i>
+                    <input id="address" type="text" class="validate">
+                    <label for="address">Street Address</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">location_on</i>
+                    <input id="address2" type="text" class="validate">
+                    <label for="address2">Address Line 2</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">location_city</i>
+                    <input id="city" type="text" class="validate">
+                    <label for="city">City</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">location_on</i>
+                    <input id="state" type="text" class="validate">
+                    <label for="state">State / Province</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload resume">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <h1>Work experience</h1>
+
+    <div class="row" data-ng-repeat="choice in choices">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_balance</i>
+                    <input id="company_name" type="text" class="validate">
+                    <label for="company_name">Company name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">short_text</i>
+                    <input id="job_title" type="text" class="validate">
+                    <label for="job_title">Job title</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">location_on</i>
+                    <input id="location" type="text" class="validate">
+                    <label for="location">Location</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">date_range</i>
+                    <input id="datepicker2" type="text" class="datepicker">
+                    <label for="datepicker2">Birth Date</label>
+                </div>
+                <div class="input-field col s2"><p class="text-center to">to</p></div>
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">date_range</i>
+                    <input id="datepicker3" type="text" class="datepicker">
+                    <label for="datepicker3">Birth Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Job Responsibilities</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea2" class="materialize-textarea"></textarea>
+                            <label for="textarea2">Job Achievements</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </form>
+
+
+    </div>
+
+    <div class="row btn_box">
+        <div class="col s6 offset-s8">
+            <a class="btn-floating btn-large waves-effect waves-light" ng-click="addNew()">
+                <i class="material-icons">add</i></a>
+
+            <a class="btn-floating btn-large waves-effect waves-light red" ng-click="remove()">
+                <i class="material-icons">delete</i></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Junior</option>
+                <option value="2">Middle</option>
+                <option value="3">Senior</option>
+            </select>
+            <label>Level</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label>Language</label>
+        </div>
+    </div>
+
+</div>
+

@@ -1,5 +1,5 @@
 angular.module('NerdCtrl', []).controller('NerdController', function($scope, Nerd) {
-    angular.element(document).ready(function () {
+   /* angular.element(document).ready(function () {
         console.log(Nerd.get());
         Nerd.get().then(function(value) {
             console.log(value.data);
@@ -8,7 +8,7 @@ angular.module('NerdCtrl', []).controller('NerdController', function($scope, Ner
         });
               Nerd.delete(value.data[0]._id);
 
-    });
+    });*/
     $scope.tagline = 'Nothing beats a pocket protector!';
 
 });
